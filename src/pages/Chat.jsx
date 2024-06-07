@@ -79,7 +79,7 @@ const Chat = () => {
 
     getZander();
     getJeffrey();
-  }, [setZander, setJeffrey, pb]);
+  }, [setZander, setJeffrey]);
 
   const onsend = async (e) => {
     e.preventDefault();
