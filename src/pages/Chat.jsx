@@ -15,10 +15,7 @@ const Chat = () => {
     window.location.href = "/";
   }
 
-  const pbUrl = import.meta.env.VITE_POCKETBASE_URL;
-  const pb = useMemo(() => {
-    new PocketBase(pbUrl);
-  }, [pbUrl]);
+  const pb = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
 
   useEffect(() => {
     pb.collection("users").subscribe(
